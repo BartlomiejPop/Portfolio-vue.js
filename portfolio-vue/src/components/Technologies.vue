@@ -19,11 +19,11 @@ const technologyIcon = {
 </script>
 
 <template>
-  <div v-for="n in 5" class="icon-wrapper">
+  <div v-for="technology in technologies" class="icon-wrapper">
     <v-icon
       class="ma-2 opacity-1"
-      color="indigo"
-      icon="mdi-react"
+      color="#212121"
+      :icon="technologyIcon[technology]"
       size="70"
     ></v-icon>
   </div>
@@ -32,8 +32,8 @@ const technologyIcon = {
 <style>
 .icon-wrapper {
   margin-top: 2rem;
-  background-color: rgba(174, 174, 174, 0.3);
-  border: 2px solid rgb(69, 69, 69);
+  background-color: rgba(207, 206, 206, 0.3);
+  border: 3px solid rgb(69, 69, 69);
   border-radius: 12px;
   text-align: center;
 }

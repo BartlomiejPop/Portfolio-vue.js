@@ -1,19 +1,32 @@
+<script setup>
+defineProps({
+  nextProject: String,
+  isIntroduction: { type: Boolean, required: false },
+});
+</script>
+
 <template>
-  <div class="next-project">
-    <v-icon
-      color="black"
-      icon="mdi-menu-down"
-      size="x-large"
-      class="mx-16"
-    ></v-icon
-    ><span class="next-project-title"> Next Project</span>
-    <v-icon
-      color="black"
-      icon="mdi-menu-down"
-      size="x-large"
-      class="mx-16"
-    ></v-icon>
-  </div>
+  <a
+    :href="'#' + nextProject"
+    style="text-decoration: none; scroll-behavior: smooth"
+  >
+    <div class="next-project">
+      <v-icon
+        color="black"
+        icon="mdi-menu-down"
+        size="x-large"
+        class="mx-16"
+      ></v-icon>
+      <span class="next-project-title" v-if="isIntroduction">My Projects</span>
+      <span class="next-project-title" v-else>Next Project</span>
+      <v-icon
+        color="black"
+        icon="mdi-menu-down"
+        size="x-large"
+        class="mx-16"
+      ></v-icon>
+    </div>
+  </a>
 </template>
 
 <style>
