@@ -1,13 +1,14 @@
 <script setup>
-defineProps({
+const props = defineProps({
   nextProject: String,
   isIntroduction: { type: Boolean, required: false },
 });
+console.log(props.nextProject);
 </script>
 
 <template>
   <a
-    :href="'#' + nextProject"
+    :href="'#' + props.nextProject"
     style="text-decoration: none; scroll-behavior: smooth"
   >
     <div class="next-project">
@@ -46,5 +47,7 @@ defineProps({
 .next-project-title {
   font-size: 18px;
   font-weight: 500;
+  text-decoration: none;
+  color: #fff;
 }
 </style>

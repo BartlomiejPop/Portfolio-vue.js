@@ -5,7 +5,12 @@
       :style="{ '--background-image': `url(${backgroundImage})` }"
     >
       <div class="project-wrapper">
-        <v-card class="mx-auto d-block" width="50%">
+        <v-card
+          :style="{ '--highlight-color': highlightColor }"
+          class="d-block shadow border"
+          border="opacity-50 md"
+          width="60rem"
+        >
           <div class="project-image-wrapper">
             <a :href="projectUrl" target="_blank">
               <v-img
@@ -17,6 +22,7 @@
             </a>
           </div>
           <v-card-title> {{ title }} </v-card-title>
+          <v-divider :thickness="2"></v-divider>
 
           <div style="display: flex; cursor: pointer; align-items: center">
             <v-card-text>
@@ -24,7 +30,7 @@
             </v-card-text>
             <a :href="githubUrl" target="_blank">
               <v-icon
-                class="ma-3 opacity-1"
+                class="ma-3 opacity-1 gh-icon"
                 color="#fff"
                 icon="mdi-github"
                 size="80"
@@ -32,13 +38,16 @@
             </a>
           </div>
         </v-card>
-        <div class="d-flex justify-space-around w-50">
+        <div class="d-flex justify-space-around w-100">
           <Technologies :technologies="technologies"></Technologies>
         </div>
       </div>
     </div>
-    <div style="position: absolute; bottom: 0">
-      <NextProject></NextProject>
+    <div style="position: absolute; bottom: 0; z-index: 500">
+      <NextProject
+        :isIntroduction="false"
+        :nextProject="props.nextProject"
+      ></NextProject>
     </div>
   </div>
 </template>
@@ -53,6 +62,7 @@ const props = defineProps({
   backgroundImage: String,
   projectImage: String,
   nextProject: String,
+  highlightColor: String,
   technologies: Array,
 });
 </script>
@@ -76,7 +86,7 @@ const props = defineProps({
   left: 0;
   right: 0;
   bottom: 0;
-  background-image: var(--background-image); /* Użycie zmiennej CSS */
+  background-image: var(--background-image);
   background-size: cover;
   background-position: center;
   filter: blur(10px);
@@ -90,6 +100,18 @@ const props = defineProps({
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+.shadow:hover {
+  box-shadow: 8px 8px 62px 0px var(--highlight-color);
+}
+
+.gh-icon {
+  transition: scale 0.1s ease;
+}
+
+.gh-icon:hover {
+  scale: 1.1;
 }
 
 .project-image {

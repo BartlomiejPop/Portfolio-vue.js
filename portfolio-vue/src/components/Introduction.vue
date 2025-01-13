@@ -7,9 +7,10 @@ import NextProject from "./NextProject.vue";
     <LinesBackground></LinesBackground>
     <div
       style="
-        padding: 5rem 20rem 0 20rem;
+        padding-top: 5rem;
         display: flex;
-        justify-content: space-between;
+        justify-content: center;
+        gap: 5rem;
       "
     >
       <div>
