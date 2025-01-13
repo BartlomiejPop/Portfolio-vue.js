@@ -1,5 +1,6 @@
 <template>
   <Introduction></Introduction>
+  <!-- locally use:   projectImage="../assets/moviesearch.jpg" -->
   <ProjectContainer
     id="movie-search"
     title="Movie Search"
@@ -12,6 +13,7 @@
     nextProject="so-yummy"
     :technologies="['firebase', 'git', 'javascript', 'sass']"
   ></ProjectContainer>
+  <!-- locally use:   projectImage="../assets/soYummy.jpg" -->
   <ProjectContainer
     id="so-yummy"
     title="So Yummy"
@@ -19,11 +21,12 @@
     projectUrl="https://bartlomiejpop.github.io/So-Yummy-frontend/"
     githubUrl="https://github.com/BartlomiejPop/So-Yummy-frontend"
     backgroundImage="../assets/soYummyBg.jpg"
-    projectImage="../assets/soYummy.jpg"
+    projectImage="/Portfolio-vue.js/assets/soYummy.jpg"
     highlightColor="#65bb65"
     nextProject="circles"
     :technologies="['mongo', 'git', 'node', 'javascript', 'sass']"
   ></ProjectContainer>
+  <!-- locally use:   projectImage="../assets/circles.jpg" -->
   <ProjectContainer
     id="circles"
     title="Circles"
@@ -31,11 +34,12 @@
     projectUrl="https://bartlomiejpop.github.io/circles-ranking/"
     githubUrl="https://github.com/BartlomiejPop/circles-ranking"
     backgroundImage="../assets/circlesBackground.png"
-    projectImage="../assets/circles.jpg"
+    projectImage="/Portfolio-vue.js/assets/circles.jpg"
     highlightColor="rgb(191, 51, 206)"
     nextProject="weather-app"
     :technologies="['mongo', 'git', 'node', 'javascript', 'sass']"
   ></ProjectContainer>
+  <!-- locally use:   projectImage="../assets/walletapp.jpg" -->
   <ProjectContainer
     id="weather-app"
     title="Weather App"
@@ -43,11 +47,12 @@
     projectUrl="https://bartlomiejpop.github.io/weather-app-ts-project/"
     githubUrl="https://github.com/BartlomiejPop/weather-app-ts-project"
     backgroundImage="../assets/weatherAppBg.jpg"
-    projectImage="../assets/weatherApp.jpg"
+    projectImage="/Portfolio-vue.js/assets/weatherApp.jpg"
     highlightColor="rgb(76, 92, 243)"
     nextProject="phonebook"
     :technologies="['react', 'sass', 'javascript']"
   ></ProjectContainer>
+  <!-- locally use:   projectImage="../assets/phonebook.jpg" -->
   <ProjectContainer
     id="phonebook"
     title="Phonebook"
@@ -55,11 +60,12 @@
     projectUrl="https://bartlomiejpop.github.io/weather-app-ts-project/"
     githubUrl="https://github.com/BartlomiejPop/weather-app-ts-project"
     backgroundImage="../assets/phonebookBg.jpg"
-    projectImage="../assets/phonebook.jpg"
+    projectImage="/Portfolio-vue.js/assets/phonebook.jpg"
     highlightColor="rgb(255, 255, 255)"
     nextProject="mongodb-contactbook"
     :technologies="['react', 'javascript']"
   ></ProjectContainer>
+  <!-- locally use:   projectImage="../assets/contactbookBg.jpg" -->
   <ProjectContainer
     id="mongodb-contactbook"
     title="MongoDb Contactbook"
@@ -67,11 +73,12 @@
     projectUrl="https://github.com/BartlomiejPop/REST-API-application"
     githubUrl="https://github.com/BartlomiejPop/REST-API-application"
     backgroundImage="../assets/contactbookBg.jpg"
-    projectImage="../assets/contactbookBg.jpg"
+    projectImage="/Portfolio-vue.js/assets/contactbookBg.jpg"
     highlightColor="rgb(255, 255, 255)"
     nextProject="wallet-app"
     :technologies="['node', 'mongo', 'javascript']"
   ></ProjectContainer>
+  <!-- locally use:   projectImage="../assets/walletapp.jpg" -->
   <ProjectContainer
     id="wallet-app"
     title="Wallet App"
@@ -79,11 +86,12 @@
     projectUrl="https://bartlomiejpop.github.io/Wallet-App/"
     githubUrl="https://github.com/BartlomiejPop/Wallet-App"
     backgroundImage="../assets/walletappBg.jpg"
-    projectImage="../assets/walletapp.jpg"
+    projectImage="/Portfolio-vue.js/assets/walletapp.jpg"
     highlightColor="rgb(255, 255, 255)"
     nextProject="ice-cream"
     :technologies="['node', 'mongo', 'javascript', 'react', 'git']"
   ></ProjectContainer>
+  <!-- locally use:   projectImage="../assets/icecream.jpg" -->
   <ProjectContainer
     id="ice-cream"
     title="Ice Cream"
@@ -91,7 +99,7 @@
     projectUrl="https://kamild90.github.io/projekt-grupa-3/"
     githubUrl="https://github.com/KamilD90/projekt-grupa-3"
     backgroundImage="../assets/icecreamBg.png"
-    projectImage="../assets/icecream.jpg"
+    projectImage="/Portfolio-vue.js/assets/icecream.jpg"
     highlightColor="rgb(255, 255, 255)"
     :technologies="['javascript', 'git', 'sass']"
     :isLastProject="true"
