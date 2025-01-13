@@ -2,8 +2,8 @@
 const props = defineProps({
   nextProject: String,
   isIntroduction: { type: Boolean, required: false },
+  isLastProject: { type: Boolean, required: false },
 });
-console.log(props.nextProject);
 </script>
 
 <template>

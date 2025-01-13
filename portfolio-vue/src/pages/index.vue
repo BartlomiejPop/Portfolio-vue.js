@@ -94,6 +94,7 @@
     projectImage="../../assets/icecream.jpg"
     highlightColor="rgb(255, 255, 255)"
     :technologies="['javascript', 'git', 'sass']"
+    :isLastProject="true"
   ></ProjectContainer>
 </template>
 

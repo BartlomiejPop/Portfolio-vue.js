@@ -1,6 +1,7 @@
 <script>
 import LinesBackground from "./LinesBackground.vue";
 import NextProject from "./NextProject.vue";
+import Technologies from "./Technologies.vue";
 </script>
 <template>
   <div style="height: 100vh; position: relative" id="introduction">
@@ -14,7 +15,7 @@ import NextProject from "./NextProject.vue";
       "
     >
       <div>
-        <img width="250px" src="../assets/photo.jpg" />
+        <img width="20%" src="../assets/photo.jpg" />
         <p style="font-size: 3rem">Bartłomiej Poprawa</p>
         <p style="width: 50rem; font-size: 1.1rem">
           I’m organized and motivated person, interested in web development.
@@ -47,6 +48,24 @@ import NextProject from "./NextProject.vue";
         </a>
       </div>
     </div>
+    <p class="tech-stack-title">Tech Stack:</p>
+    <div class="d-flex justify-space-around w-100">
+      <Technologies
+        :technologies="[
+          'react',
+          'node',
+          'vue',
+          'nest',
+          'typescript',
+          'mongo',
+          'git',
+          'firebase',
+          'sass',
+          'javascript',
+        ]"
+        :isIntroduction="true"
+      ></Technologies>
+    </div>
     <div style="position: absolute; bottom: 0">
       <NextProject
         :isIntroduction="true"
@@ -55,3 +74,11 @@ import NextProject from "./NextProject.vue";
     </div>
   </div>
 </template>
+
+<style>
+.tech-stack-title {
+  text-align: center;
+  font-size: 1.5rem;
+  margin-top: 2%;
+}
+</style>

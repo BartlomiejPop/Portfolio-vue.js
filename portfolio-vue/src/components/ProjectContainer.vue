@@ -7,9 +7,8 @@
       <div class="project-wrapper">
         <v-card
           :style="{ '--highlight-color': highlightColor }"
-          class="d-block shadow border"
+          class="d-block shadow card"
           border="opacity-50 md"
-          width="60rem"
         >
           <div class="project-image-wrapper">
             <a :href="projectUrl" target="_blank">
@@ -43,7 +42,10 @@
         </div>
       </div>
     </div>
-    <div style="position: absolute; bottom: 0; z-index: 500">
+    <div
+      v-if="!isLastProject"
+      style="position: absolute; bottom: 0; z-index: 500"
+    >
       <NextProject
         :isIntroduction="false"
         :nextProject="props.nextProject"
@@ -64,6 +66,7 @@ const props = defineProps({
   nextProject: String,
   highlightColor: String,
   technologies: Array,
+  isLastProject: { type: Boolean, required: false },
 });
 </script>
 
@@ -100,6 +103,16 @@ const props = defineProps({
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+.card {
+  max-width: 60rem;
+}
+
+@media (max-width: 1000px) {
+  .card {
+    max-width: 30rem;
+  }
 }
 
 .shadow:hover {
