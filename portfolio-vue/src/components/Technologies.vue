@@ -11,6 +11,7 @@ const technologyIcon = {
   react: "mdi-react",
   vue: "mdi-vuejs",
   javascript: "mdi-language-javascript",
+  csharp: "mdi-language-csharp",
   typescript: "mdi-language-typescript",
   sass: "mdi-sass",
   node: "mdi-nodejs",

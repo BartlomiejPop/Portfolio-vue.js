@@ -9,13 +9,15 @@ import Technologies from "./Technologies.vue";
     <div
       style="
         padding-top: 5rem;
+        padding-left: 5rem;
+        padding-right: 5rem;
         display: flex;
         justify-content: center;
         gap: 5rem;
       "
     >
       <div>
-        <img width="20%" src="../assets/photo.jpg" />
+        <img width="15%" src="../assets/photo.jpg" />
         <p style="font-size: 3rem">Bartłomiej Poprawa</p>
         <p style="width: 50rem; font-size: 1.1rem">
           I’m organized and motivated person, interested in web development.
@@ -60,8 +62,8 @@ import Technologies from "./Technologies.vue";
           'mongo',
           'git',
           'firebase',
+          'csharp',
           'sass',
-          'javascript',
         ]"
         :isIntroduction="true"
       ></Technologies>
